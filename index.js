@@ -2,6 +2,7 @@
 const initializeGitRepo = require('./lib/initializeRepo');
 const emojifyCommit = require('./lib/emojifyCommit');
 const getCommitMessage = require('./lib/getCommitMessage');
+const writeMessage = require('./lib/writeMessage');
 
 const helpMessage = `
 commoji
@@ -29,8 +30,9 @@ function main(argument = '') {
     return initializeGitGlobal();
   }
   if (typeof argument === 'string' && argument.includes('COMMIT_EDITMSG')) {
-    const commitMessage = getCommitMessage(argument);
-    console.log(emojifyCommit(commitMessage));
+    const originalMessage = getCommitMessage(argument);
+    const newMessage = emojifyCommit(originalMessage);
+    return writeMessage(argument, newMessage);
   }
   console.log(helpMessage);
 }
