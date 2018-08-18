@@ -2,7 +2,7 @@
 
 ## Usage
 
-### Clone the repo
+Clone the repo
 ```bash
 $ git clone git@github.com:matchai/commoji.git
 ```
