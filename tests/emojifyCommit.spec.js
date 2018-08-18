@@ -36,4 +36,10 @@ describe("emojifyCommit should properly append single qualifier commits", () => 
 
     expect(emojifyCommit(commit)).toBe("🐛 " + commit);
   });
+
+  it("should return the initial message that starts with an emoji", () => {
+    const commit = "🐛 this bug is fixing me";
+
+    expect(emojifyCommit(commit)).toBe(commit);
+  });
 });
