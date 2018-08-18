@@ -1,0 +1,31 @@
+{
+  "name": "commoji",
+  "version": "1.0.0",
+  "description": "Pre-appends your commit messages with the correct emoji automatically.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matchai/commoji.git"
+  },
+  "keywords": [
+    "node",
+    "module",
+    "commoji",
+    "emoji",
+    "commit",
+    "git",
+    "hook"
+  ],
+  "contributors": [
+    "Tiffany Le-Nguyen <letiffany.nguyen@gmail.com> (https://github.com/sirMerr)",
+    "Matan Kushner <matchai@me.com> (https://github.com/matchai)"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matchai/commoji/issues"
+  },
+  "homepage": "https://github.com/matchai/commoji#readme"
+}
