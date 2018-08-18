@@ -1,19 +1,8 @@
 {
-  "defaults": [
-    {
-      "name": "add",
-      "character": "✨",
-      "markdown": ":sparkles:"
-    },
-    {
-      "name": "remove",
-      "character": "🔥",
-      "markdown": ":fire:"
-    },
-    {
-      "name": "bug",
-      "character": "🐛",
-      "markdown": ":bug:"
-    }
-  ]
+  "✨": ["add", "feature", "feat"],
+  "🔥": ["remove", "destroy"],
+  "🐛": ["fix", "bug"],
+  "🔨": ["refactor", "rework", "optimize"],
+  "📝": ["document", "doc", "comment", "readme"],
+  "🔧": ["configure", "package.json", "config"]
 }
