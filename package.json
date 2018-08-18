@@ -4,7 +4,7 @@
   "description": "Pre-appends your commit messages with the correct emoji automatically.",
   "bin": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/matchai/commoji/issues"
   },
-  "homepage": "https://github.com/matchai/commoji#readme"
+  "homepage": "https://github.com/matchai/commoji#readme",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  }
 }
