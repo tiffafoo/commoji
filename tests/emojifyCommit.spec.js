@@ -1,6 +1,6 @@
 const emojifyCommit = require("../lib/emojifyCommit");
 
-describe("emojifyCommit should properly append single qualifier commits", () => {
+describe("emojifyCommit should properly append qualifier commits", () => {
   it("should prepend ✨ to a commit message with 'Add' at the start", () => {
     const commit = "Add a test commit";
 
@@ -41,5 +41,23 @@ describe("emojifyCommit should properly append single qualifier commits", () => 
     const commit = "🐛 this bug is fixing me";
 
     expect(emojifyCommit(commit)).toBe(commit);
+  });
+
+  it("should not prepend any emojis if there are no qualifiers", () => {
+    const commit = "Hi I am a commit with no qualifier";
+
+    expect(emojifyCommit(commit)).toBe(commit);
+  });
+
+  it("should not prepend any emojis when the commit starts with a markdown emoji", () => {
+    const commit = ":bug: I am a prepended commit";
+
+    expect(emojifyCommit(commit)).toBe(commit);
+  });
+
+  it("should not prepend any emojis when the commit starts with a markdown emoji", () => {
+    const commit = ":: Refactor a prepended commit";
+
+    expect(emojifyCommit(commit)).toBe(`🔨 ` + commit);
   });
 });
