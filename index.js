@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const initializeGitRepo = require('./lib/initializeRepo');
-const emojifyCommit = require('./lib/emojifyCommit');
-const getCommitMessage = require('./lib/getCommitMessage');
-const writeMessage = require('./lib/writeMessage');
+const initializeGitRepo = require("./lib/initializeRepo");
+const emojifyCommit = require("./lib/emojifyCommit");
+const getCommitMessage = require("./lib/getCommitMessage");
+const writeMessage = require("./lib/writeMessage");
 
 const helpMessage = `
 commoji
@@ -22,14 +22,14 @@ FLAGS:
         'git init'.
 `;
 
-function main(argument = '') {
-  if (argument === '--init') {
+function main(argument = "") {
+  if (argument === "--init") {
     return initializeGitRepo(`${process.env.PWD}/.git/hooks`);
   }
-  if (argument === '--global') {
+  if (argument === "--global") {
     return initializeGitGlobal();
   }
-  if (typeof argument === 'string' && argument.includes('COMMIT_EDITMSG')) {
+  if (typeof argument === "string" && argument.includes("COMMIT_EDITMSG")) {
     const originalMessage = getCommitMessage(argument);
     const newMessage = emojifyCommit(originalMessage);
     return writeMessage(argument, newMessage);

@@ -1,14 +1,15 @@
 {
   "name": "commoji",
   "version": "1.0.0",
-  "description": "Pre-appends your commit messages with the correct emoji automatically.",
+  "description": "Automatically prepend your commit messages with the appropriate emoji",
   "bin": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matchai/commoji.git"
+    "url": "git+https://github.com/sirmerr/commoji.git"
   },
   "keywords": [
     "node",
@@ -25,13 +26,21 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/matchai/commoji/issues"
+    "url": "https://github.com/sirmerr/commoji/issues"
   },
-  "homepage": "https://github.com/matchai/commoji#readme",
-  "devDependencies": {
-    "jest": "^23.5.0"
-  },
+  "homepage": "https://github.com/sirmerr/commoji#readme",
   "dependencies": {
     "emoji-regex": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
