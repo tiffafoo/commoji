@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/sirmerr/commoji#readme",
   "dependencies": {
+    "cosmiconfig": "^5.0.6",
     "emoji-regex": "^7.0.0"
   },
   "devDependencies": {
