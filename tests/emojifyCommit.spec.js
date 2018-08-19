@@ -55,7 +55,7 @@ describe("emojifyCommit should properly append qualifier commits", () => {
     expect(emojifyCommit(commit)).toBe(commit);
   });
 
-  it("should not prepend any emojis when the commit starts with a markdown emoji", () => {
+  it("should prepend 🔨to a message starting with '::', ignoring '::'", () => {
     const commit = ":: Refactor a prepended commit";
 
     expect(emojifyCommit(commit)).toBe(`🔨 ` + commit);
