@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const initializeGitRepo = require("./lib/initializeRepo");
+const initializeGitGlobal = require("./lib/globalRepos");
 const emojifyCommit = require("./lib/emojifyCommit");
 const getCommitMessage = require("./lib/getCommitMessage");
 const writeMessage = require("./lib/writeMessage");
