@@ -1,4 +1,6 @@
-# commoji
+![logo](https://user-images.githubusercontent.com/11183523/45936482-fca41480-bf84-11e8-862f-44595853327b.png)
+
+<h3>Automatically prepend your git commits with the appropriate emoji.</h3>
 
 ## Usage
 
